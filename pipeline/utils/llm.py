@@ -1,10 +1,12 @@
 from groq import Groq
 import os
 from dotenv import load_dotenv
+import streamlit as st
 
 load_dotenv()
+key = st.secrets.get("key") or os.getenv("key")
 
-client = Groq(api_key=os.getenv("key"))
+client = Groq(api_key=os.getenv(key))
 
 def call_llm(prompt: str) -> str:
     completion = client.chat.completions.create(
