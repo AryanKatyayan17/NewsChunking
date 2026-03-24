@@ -9,6 +9,11 @@ from services.vector_service import VectorStore
 from services.global_vector_store import GlobalVectorStore
 from services.chat_service import chat_with_news
 
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+
 # PAGE CONFIG
 st.set_page_config(page_title="News Intelligence System", layout="wide")
 
