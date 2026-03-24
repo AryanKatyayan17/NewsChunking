@@ -1,4 +1,4 @@
-from utils.llm import call_llm
+from pipeline.utils.llm import call_llm
 
 def answer_question(context_chunks, question, vector_store):
     relevant_chunks = vector_store.search(question)
