@@ -1,4 +1,4 @@
-from utils.llm import call_llm
+from streamlit_app.utils.llm import call_llm
 import json
 import logging
 import re
